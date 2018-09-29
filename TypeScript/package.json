@@ -4,10 +4,9 @@
   "description": "Seed project for TDD code katas on TypeScript and mocha",
   "main": "index.js",
   "scripts": {
-    "precompile": "rimraf app/**/*.js test/**/*.js",
     "compile": "tsc",
-    "pretest": "rimraf app/**/*.js test/**/*.js",
-    "test": "nyc mocha"
+    "test:unit": "nyc mocha",
+    "test:mutation": "stryker run"
   },
   "author": "paucls",
   "homepage": "https://github.com/paucls/typescript-mocha-kata-seed",
@@ -15,14 +14,21 @@
   "private": true,
   "devDependencies": {
     "@types/chai": "~3.5.2",
+    "@types/lodash": "^4.14.116",
     "@types/mocha": "~2.2.41",
     "@types/node": "~7.0.18",
     "chai": "~3.5.0",
-    "mocha": "~3.2.0",
-    "nyc": "~11.0.3",
+    "lodash": "^4.17.10",
+    "mocha": "^5.2.0",
+    "nyc": "^13.0.1",
     "rimraf": "~2.5.2",
+    "stryker": "^0.29.1",
+    "stryker-api": "^0.21.1",
+    "stryker-mocha-framework": "^0.12.2",
+    "stryker-mocha-runner": "^0.14.2",
+    "stryker-typescript": "^0.13.2",
     "ts-node": "~3.1.0",
-    "typescript": "~2.2.0"
+    "typescript": "^3.0.3"
   },
   "nyc": {
     "extension": [
@@ -41,4 +47,3 @@
     ]
   }
 }
-
