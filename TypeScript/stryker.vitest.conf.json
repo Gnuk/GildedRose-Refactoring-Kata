@@ -1,0 +1,23 @@
+{
+  "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+  "packageManager": "npm",
+  "reporters": [
+    "html",
+    "clear-text",
+    "progress"
+  ],
+  "testRunner": "command",
+  "coverageAnalysis": "perTest",
+  "tsconfigFile": "tsconfig.json",
+  "timeoutFactor": 3,
+  "mutator": {
+    "plugins": ["typescript"]
+  },
+  "transpilers": [
+    "typescript"
+  ],
+  "mutate": ["app/**/*.{js,ts}"],
+  "commandRunner": {
+    "command": "npx vitest run"
+  }
+}
