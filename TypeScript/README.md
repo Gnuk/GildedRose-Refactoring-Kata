@@ -12,7 +12,9 @@ npm install
 
 ## Run the unit tests from the Command-Line
 
-There are two unit test frameworks to choose from, Jest and Mocha.
+There are three unit test frameworks to choose from, Jest, Mocha and Vitest.
+
+Jest
 
 ```sh
 npm run test:jest
@@ -30,6 +32,11 @@ Mocha
 npm run test:mocha
 ```
 
+Vitest (runs in watch mode with coverage)
+
+```sh
+npm run test:vitest
+```
 
 ## Run the TextTest fixture from the Command-Line
 

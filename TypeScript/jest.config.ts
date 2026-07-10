@@ -1,5 +1,7 @@
-import { pathsToModuleNameMapper } from  "ts-jest";
-import { compilerOptions } from './tsconfig.json'
+import { readFileSync } from 'node:fs';
+import { pathsToModuleNameMapper } from "ts-jest";
+
+const { compilerOptions } = JSON.parse(readFileSync('./tsconfig.json', 'utf-8'));
 
 export default {
   roots: ['<rootDir>/app', '<rootDir>/test/jest'],
